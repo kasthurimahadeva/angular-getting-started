@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   pageTitle = 'Product List';
+  imageWidth = 50;
+  imageMargin = 2;
+  showImage = false;
+  listFilter = 'cart';
   products: any[] = [
     {
       'productId': 1,
@@ -16,7 +20,7 @@ export class ProductListComponent implements OnInit {
       'description': 'Leaf rake with 48-inch wooden handle.',
       'price': 19.95,
       'starRating': 3.2,
-      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png'
+      'imageUrl': 'https://cdn.fredericia.com/Perfion/Image.aspx?id=2c28bced-37fc-4a5b-9d21-4ce5d1869f86&size=550x275&format=png'
     },
     {
       'productId': 2,
@@ -26,7 +30,7 @@ export class ProductListComponent implements OnInit {
       'description': '15 gallon capacity rolling garden cart',
       'price': 32.99,
       'starRating': 4.2,
-      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
+      'imageUrl': 'http://rnbtheme.com/forty_two/wp-content/uploads/2017/10/slider_2_2.png'
     },
     {
       'productId': 5,
@@ -36,7 +40,7 @@ export class ProductListComponent implements OnInit {
       'description': 'Curved claw steel hammer',
       'price': 8.9,
       'starRating': 4.8,
-      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png'
+      'imageUrl': 'https://cdn.webshopapp.com/shops/9368/files/237662738/fredericia-furniture-swoon-lounge-chair-fredericia.jpg'
     },
     {
       'productId': 8,
@@ -46,7 +50,8 @@ export class ProductListComponent implements OnInit {
       'description': '15-inch steel blade hand saw',
       'price': 11.55,
       'starRating': 3.7,
-      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png'
+      // tslint:disable-next-line:max-line-length
+      'imageUrl': 'https://hauteliving.imgix.net/product-photos/fredericia-eve-chair/fredericia-eve-chair-angle-haute-living_181128_145049_1.jpg?auto=format%2Ccompress&fit=clip&q=5&w=1682&s=65c3cc0ad678b2532d4c9d1e0fd8d4df'
     },
     {
       'productId': 10,
@@ -56,13 +61,17 @@ export class ProductListComponent implements OnInit {
       'description': 'Standard two-button video game controller',
       'price': 35.95,
       'starRating': 4.6,
-      'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png'
+      'imageUrl': 'https://cdn.fredericia.com/Perfion/Image.aspx?id=28eacb0b-17a7-4276-98f3-693706f804b3&size=550x275&format=png'
     }
   ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toShowImage(): void {
+    this.showImage = !this.showImage;
   }
 
 }
